@@ -11,6 +11,9 @@ namespace atbash
     {
         static string AtbashDecrypt(string encryptedmassage)
         {
+            encryptedmassage = encryptedmassage.Replace("\n", " \n ");
+
+
             string decrypted = "";
             foreach (char c in encryptedmassage)
             {
@@ -33,6 +36,12 @@ namespace atbash
             }
 
             return decrypted;
+        
+        
+
+
+
+
         }
 
         static string SuspiciousWords(string dmes)
@@ -104,7 +113,9 @@ namespace atbash
         {
             string decryptesMesseage = "Lfi ulixvh ziv kivkzirmt uli z nzqli zggzxp lm gsv Arlmrhg vmvnb.\nGsv ilxpvg fmrgh ziv ivzwb zmw dzrgrmt uli gsv hrtmzo.\nYlnyh szev yvvm kozxvw mvzi pvb olxzgrlmh.\nMfpsyz urtsgvih ziv hgzmwrmt yb uli tilfmw rmurogizgrlm.\nGsv zggzxp droo yv hfwwvm zmw hgilmt -- gsvb dlm’g hvv rg xlnrmt.\nDv nfhg hgzb srwwvm zmw pvvk gsv kozm hvxivg fmgro gsv ozhg nlnvmg.\nErxglib rh mvzi. Hgzb ivzwb.";
             DecodeCipher(decryptesMesseage);
+
         }
+
     }
 
 }
